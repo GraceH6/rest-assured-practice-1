@@ -1,4 +1,4 @@
-package apiTests;
+package apitests;
 
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.*;
 
-public class MainTests {
+public class GetPostDeleteMethodTests {
     static final String BASE_URL = "https://reqres.in";
 
     @Test
@@ -62,7 +62,7 @@ public class MainTests {
     }
 
     @Test
-    void DeletedUserTest() {
+    void getDeletedUserTest() {
         given()
                 .when()
                 .delete(BASE_URL + "/api/users/2")
